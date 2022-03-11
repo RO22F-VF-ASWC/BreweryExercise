@@ -10,7 +10,7 @@ namespace BreweryLib.ThreadCollections
         private Mutex _mutex;
         private Semaphore _full;
         private Semaphore _empty;
-        private Queue<T> _buffer;
+        private Queue<T> _buffer; // Or use ConcurrentQueue<T> _buffer, then you do not need _mutex
 
         public BoundedBuffer(int capacity = 10000000)
         {
